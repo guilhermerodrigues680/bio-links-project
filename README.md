@@ -22,6 +22,8 @@ Ao acessar a página do Netlify CMS, `http://localhost:8000/admin/` ou `https://
 
 Veja esse projeto em execução em: [https://bio-links-project.netlify.app/](https://bio-links-project.netlify.app/)
 
+_Observação: Ao fazer deploy no Netlify configurar o OAuth provider no Netlify site [Enable OAuth for a Netlify site](https://docs.netlify.com/visitor-access/oauth-provider-tokens/#enable-oauth-for-a-netlify-site)_
+
 ## 🚀 Quick start
 
 0. **Versões**

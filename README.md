@@ -14,6 +14,15 @@
 
 ## 🚀 Quick start
 
+0. **Versões**
+
+   ```console
+     $ node -v
+       v14.19.2
+     $ npm -v
+       6.14.17
+   ```
+
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI to create a new site, specifying the minimal starter.

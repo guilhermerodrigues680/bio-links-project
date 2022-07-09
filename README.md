@@ -4,8 +4,13 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Projeto Bio Links
 </h1>
+<p align="center">
+  <a href="https://app.netlify.com/sites/bio-links-project/deploys">
+    <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/be11415e-bfe3-4eb3-a91e-c4f4e2c99126/deploy-status" />
+  </a>
+</p>
 
 ## 🚀 Quick start
 

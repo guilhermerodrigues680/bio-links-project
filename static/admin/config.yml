@@ -7,13 +7,51 @@ backend:
 
 media_folder: static/assets
 public_folder: /assets
+
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: cms-data/blog
     create: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
+
+  - name: links
+    label: Links
+    files:
+      - file: "cms-data/bio-links.md"
+        label: "Bio Links"
+        name: "biolinks"
+        fields:
+          - {
+              label: Links,
+              name: links,
+              widget: list,
+              fields:
+                [
+                  {
+                    label: Icone,
+                    name: icon,
+                    widget: image,
+                    required: false,
+                    hint: "(opcional) Icone do link",
+                  },
+                  { label: Nome, name: name, widget: string },
+                  {
+                    label: "Habilitado",
+                    name: "isenabled",
+                    widget: "boolean",
+                    default: true,
+                  },
+                  {
+                    label: Url,
+                    name: href,
+                    widget: string,
+                    pattern:
+                      [".{8,}", "A URL deve iniciar com http:// ou https://"],
+                  },
+                ],
+            }

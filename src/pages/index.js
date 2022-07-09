@@ -1,4 +1,5 @@
-import * as React from "react"
+import React, { useEffect } from "react";
+import { graphql } from "gatsby";
 
 // styles
 const pageStyles = {
@@ -126,7 +127,13 @@ const links = [
 ]
 
 // markup
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  useEffect(() => {
+    const bioLinks =
+      data?.allMarkdownRemark?.edges?.[0]?.node?.frontmatter?.links;
+    console.debug("data", data, bioLinks);
+  }, [data]);
+
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
@@ -181,4 +188,41 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export const query = graphql`
+  {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//bio-links.md$/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            links {
+              href
+              icon
+              isenabled
+              name
+            }
+          }
+          parent {
+            ... on File {
+              name
+              sourceInstanceName
+            }
+            internal {
+              description
+            }
+          }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        siteUrl
+        description
+      }
+    }
+  }
+`;
+
+export default IndexPage;

@@ -10,4 +10,8 @@ links:
   - isenabled: false
     name: Link desativado
     href: https://stackoverflow.com/
+  - isenabled: true
+    icon: https://cdn-icons-png.flaticon.com/512/25/25231.png
+    name: Projeto Bio Links no GitHub
+    href: https://github.com/guilhermerodrigues680/bio-links-project
 ---

@@ -3,5 +3,5 @@ module.exports = {
     title: `Projeto Bio Links`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [`gatsby-plugin-netlify-cms`],
+};
